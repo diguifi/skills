@@ -1,0 +1,6 @@
+interface:
+  display_name: "Plan Creator"
+  short_description: "Create plans with fresh, sequential agent reviews"
+  default_prompt: "Use $plan-creator to write a concise plan and review it with fresh subagents until clean or the review limit is reached."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agent-skills",
+  "version": "0.1.0",
+  "description": "Reusable AI agent skills for planning and independent plan reviews.",
+  "repository": "https://github.com/diguifi/skills",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Agent Skills",
+        "shortDescription": "Reusable planning and plan review skills",
+        "category": "Productivity"
+      }
+    }
+  }
+}

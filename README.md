@@ -47,23 +47,6 @@ The marketplace points at `./`, relative to its repository root, so it works reg
 
 See the official [plugin packaging and marketplace documentation](https://developers.openai.com/plugins/build/plugins).
 
-## First skill: plan-creator
-
-Creates Markdown plans and reviews them with fresh subagents, one at a time. Automatic invocation is enabled. The default review limit is five attempts, with an early stop after a completed review that makes no edits. You can override the limit or skip reviews.
-
-Example requests:
-
-- `Create a plan for adding password reset.`
-- `plan migration.md: migrate the database; use a maximum of 3 reviews.`
-- `Create a release plan; skip automatic reviews.`
-- `review migration.md`
-
-Independent reviews require fresh-context subagent tools. When those tools are unavailable, the skill keeps the draft and reports that independent reviews could not run.
-
-## Use the skill without a plugin
-
-For an agent that supports `SKILL.md` discovery, copy or link `skills/plan-creator/` into its supported skills directory. For Codex, use `~/.agents/skills/plan-creator/` for user-wide discovery or `<project>/.agents/skills/plan-creator/` for a single project. Restart or start a new session to refresh discovery. Other agents may use different installation mechanisms.
-
 ## Add more skills
 
 Create `skills/<skill-name>/SKILL.md` with YAML frontmatter containing `name` and `description`, followed by the skill instructions. Add metadata or supporting resources only as needed. The portable plugin discovers skills under `skills/`, so additional skills do not need separate manifest entries. Update the plugin version when publishing a new release.
